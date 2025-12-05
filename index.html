@@ -15,13 +15,35 @@
     <style>
         /* Custom Styles to enhance the look */
         :root {
-            --primary-color: #007bff;
-            /* Bootstrap Primary Blue */
+            /* The accent color (dark brown #8B6D53) is now used as the Bootstrap primary color for contrast/interactivity. */
+            --primary-color: #8B6D53; 
+            /* The user's requested light background theme color. */
+            --theme-light: #F7D9BC;
             --secondary-color: #6c757d;
-            /* Bootstrap Secondary Gray */
             --highlight-color: #f8f9fa;
-            /* Light Gray Background */
         }
+
+        /* --- Bootstrap Class Overrides for New Theme --- */
+        /* Overriding Bootstrap classes to use the new custom color variables */
+        .text-primary {
+            color: var(--primary-color) !important;
+        }
+        .bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+        .btn-primary {
+            background-color: var(--primary-color) !important;
+            border-color: var(--primary-color) !important;
+        }
+        .btn-outline-primary {
+            color: var(--primary-color) !important;
+            border-color: var(--primary-color) !important;
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color) !important;
+            color: white !important;
+        }
+        /* --- End Overrides --- */
 
         body {
             font-family: 'Inter', sans-serif;
@@ -30,11 +52,11 @@
 
         /* Hero Section Styling */
         #hero {
-            background: linear-gradient(135deg, var(--primary-color), #0056b3);
-            color: white;
+            /* Changed background to the requested light theme color #F7D9BC */
+            background: linear-gradient(135deg, var(--theme-light), #E0C7A9);
+            color: #343a40; /* Changed text to dark for contrast against light background */
             padding: 100px 0;
             min-height: 80vh;
-            /* Ensure it takes up most of the viewport height */
             display: flex;
             align-items: center;
         }
@@ -44,7 +66,7 @@
             height: 250px;
             overflow: hidden;
             border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.5);
+            border: 5px solid rgba(0, 0, 0, 0.1); /* Darker border for visibility */
             margin: 0 auto 20px;
         }
 
@@ -73,7 +95,7 @@
             display: block;
             width: 60px;
             height: 4px;
-            background-color: var(--primary-color);
+            background-color: var(--primary-color); /* Uses the new accent color */
             margin: 10px auto 0;
             border-radius: 2px;
         }
@@ -112,7 +134,7 @@
         }
 
         .skill-badge:hover {
-            background-color: var(--primary-color);
+            background-color: var(--primary-color); /* Uses the new accent color */
             color: white;
             border-color: var(--primary-color);
         }
@@ -132,7 +154,7 @@
         }
 
         .social-icon:hover {
-            color: var(--primary-color);
+            color: var(--primary-color); /* Uses the new accent color */
         }
     </style>
 </head>
@@ -142,6 +164,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
+            <!-- Updated text-primary to use the new accent color -->
             <a class="navbar-brand fw-bold text-primary" href="#">M.J.M.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -174,15 +197,16 @@
                     <div class="profile-pic-container">
                         <!-- Placeholder Image (Replace with your actual photo URL) -->
                         <img src="images/mj.jpg" class="profile-pic"
-                            >
+                            alt="Meeliza Jean Mingasca Profile Picture">
                     </div>
                     <h1 class="display-3 fw-bolder mb-3">Hello, I'm Meeliza Jean Mingasca</h1>
                     <p class="lead mb-4">
                         A passionate and detail-oriented aspiring professional, ready to tackle new challenges in the
                         tech industry.
                     </p>
-                    <a href="#projects" class="btn btn-light btn-lg rounded-pill px-4 me-2 shadow-sm">View My Work</a>
-                    <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-4 shadow-sm">Get In Touch</a>
+                    <!-- Changed buttons for contrast: btn-primary and btn-outline-primary now use the dark accent color -->
+                    <a href="#projects" class="btn btn-primary btn-lg rounded-pill px-4 me-2 shadow-sm">View My Work</a>
+                    <a href="#contact" class="btn btn-outline-primary btn-lg rounded-pill px-4 shadow-sm">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -215,6 +239,7 @@
             <h2 class="section-title">Core Skills</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
+                    <!-- Updated text-primary color -->
                     <h3 class="h4 text-primary mb-3">Programming & Frameworks</h3>
                     <div>
                         <span class="skill-badge"><i class="fab fa-html5 me-1"></i> HTML5</span>
@@ -222,6 +247,7 @@
                         <span class="skill-badge"><i class="fab fa-bootstrap me-1"></i> Bootstrap 5</span>
                     </div>
 
+                    <!-- Updated text-primary color -->
                     <h3 class="h4 text-primary mt-5 mb-3">UI/UX Design & Prototyping</h3>
                     <div>
                         <span class="skill-badge"><i class="fab fa-figma me-1"></i> Figma</span>
@@ -229,6 +255,7 @@
                         <span class="skill-badge"><i class="fab fa-sketch me-1"></i> Sketch</span>
                     </div>
 
+                    <!-- Updated text-primary color -->
                     <h3 class="h4 text-primary mt-5 mb-3">Soft Skills</h3>
                     <div>
                         <span class="skill-badge">Problem-Solving</span>
@@ -251,12 +278,13 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <!-- Placeholder Image (Replace with a project screenshot) -->
-                        <img src="images/alcabs.png" class="project-img card-img-top">
+                        <img src="images/alcabs.png" class="project-img card-img-top" alt="Alcabs Eatery Project">
                         <div class="card-body">
                             <h5 class="card-title fw-bold text-primary">Alcabs Eatery</h5>
                             <p class="card-text text-muted">
-                               Members: John Carl Cabahug <br> Adonis Billy Regodon <br> James Sarillo <br> Jerniel Jao
+                                Members: John Carl Cabahug <br> Adonis Billy Regodon <br> James Sarillo <br> Jerniel Jao
                             </p>
+                            <!-- Updated badge color to use the new accent color -->
                             <span class="badge bg-primary me-2">HTML</span>
                             <span class="badge bg-primary me-2">Bootstrap 5</span>
                         </div>
@@ -267,12 +295,13 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <!-- Placeholder Image (Replace with a project screenshot) -->
-                        <img src="images/infographics.png" class="project-img card-img-top">
+                        <img src="images/infographics.png" class="project-img card-img-top" alt="Infographics Project">
                         <div class="card-body">
                             <h5 class="card-title fw-bold text-primary">Infographics</h5>
                             <p class="card-text text-muted">
                                 Members: John Carl Cabahug <br> Dexter Encarnacion <br> Adonis Billy Regodon <br> Ed Jassen Partusa <br> James Sarillo <br> Jeremy Ando <br> Jerniel Jao <br> Namoc Jusper <br> Rexon Villagracia <br> Yasu Hiro
                             </p>
+                            <!-- Updated badge color to use the new accent color -->
                             <span class="badge bg-primary me-2">Figma</span>
                         </div>
                     </div>
@@ -282,12 +311,13 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <!-- Placeholder Image (Replace with a project screenshot) -->
-                        <img src="images/siap.png" class="project-img card-img-top">
+                        <img src="images/siap.png" class="project-img card-img-top" alt="SIAP Infographic Project">
                         <div class="card-body">
                             <h5 class="card-title fw-bold text-primary">Infographic</h5>
                             <p class="card-text text-muted">
                                 Members: Jan Khevin Ligan <br> Adonis Billy Regodon <br> Ian Bentulan <br> Ivyjane Sumayang <br> James Sarillo <br> John Kenny Cabansay <br> John Paul <br> Roche Salvaloza <br> Sarwen Maranga
                             </p>
+                            <!-- Updated badge color to use the new accent color -->
                             <span class="badge bg-primary me-2">Figma</span>
                         </div>
                     </div>
@@ -324,14 +354,16 @@
                                 placeholder="Your message here..." required></textarea>
                         </div>
                         <div class="d-grid">
+                            <!-- Updated button to use the new accent color -->
                             <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow">Send
                                 Message</button>
                         </div>
                     </form>
 
                     <div class="text-center mt-4">
+                        <!-- Updated icon color to use the new accent color -->
                         <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i> meeliza.mingasca@email.com</p>
-                        <p><i class="fas fa-phone-alt text-primary me-2"></i> +63 9XX XXX XXXX</p>
+                        <p><i class="fas fa-phone-alt text-primary me-2"></i> +63 956 321 4452</p>
                     </div>
 
                 </div>
