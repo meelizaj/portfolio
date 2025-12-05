@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeliza Jean Mingasca</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJ/cn-R/xS5b5OVeX+d8l+K7qD9c/bT+z9m5z8+x38G7O7R/w5lA+"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom Styles to enhance the look */
+        :root {
+            --primary-color: #007bff;
+            /* Bootstrap Primary Blue */
+            --secondary-color: #6c757d;
+            /* Bootstrap Secondary Gray */
+            --highlight-color: #f8f9fa;
+            /* Light Gray Background */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f6;
+        }
+
+        /* Hero Section Styling */
+        #hero {
+            background: linear-gradient(135deg, var(--primary-color), #0056b3);
+            color: white;
+            padding: 100px 0;
+            min-height: 80vh;
+            /* Ensure it takes up most of the viewport height */
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic-container {
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.5);
+            margin: 0 auto 20px;
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #343a40;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Card and Project Styling */
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        /* Skills Section Styling */
+        .skill-badge {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 25px;
+            font-weight: 600;
+            background-color: var(--highlight-color);
+            color: #495057;
+            border: 1px solid #dee2e6;
+            transition: background-color 0.3s;
+        }
+
+        .skill-badge:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .social-icon:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">M.J.M.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Header) -->
+    <header id="hero" class="text-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="profile-pic-container">
+                        <!-- Placeholder Image (Replace with your actual photo URL) -->
+                        <img src="images/mj.jpg" class="profile-pic"
+                            >
+                    </div>
+                    <h1 class="display-3 fw-bolder mb-3">Hello, I'm Meeliza Jean Mingasca</h1>
+                    <p class="lead mb-4">
+                        A passionate and detail-oriented aspiring professional, ready to tackle new challenges in the
+                        tech industry.
+                    </p>
+                    <a href="#projects" class="btn btn-light btn-lg rounded-pill px-4 me-2 shadow-sm">View My Work</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-4 shadow-sm">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="lead">
+                        I am a dedicated learner with a strong foundation in problem-solving and collaboration. My goal
+                        is to apply my knowledge in challenging, dynamic environments where I can contribute to
+                        innovative solutions and grow my expertise.
+                    </p>
+                    <p>
+                        Currently focusing on expanding my portfolio with real-world UI/UX design projects. I thrive on
+                        translating complex ideas into intuitive, user-centered experiences. I believe in continuous
+                        improvement and the power of clean, thoughtful design. Let's build something great together!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h3 class="h4 text-primary mb-3">Programming & Frameworks</h3>
+                    <div>
+                        <span class="skill-badge"><i class="fab fa-html5 me-1"></i> HTML5</span>
+                        <span class="skill-badge"><i class="fab fa-css3-alt me-1"></i> CSS3</span>
+                        <span class="skill-badge"><i class="fab fa-bootstrap me-1"></i> Bootstrap 5</span>
+                    </div>
+
+                    <h3 class="h4 text-primary mt-5 mb-3">UI/UX Design & Prototyping</h3>
+                    <div>
+                        <span class="skill-badge"><i class="fab fa-figma me-1"></i> Figma</span>
+                        <span class="skill-badge"><i class="fab fa-adobe me-1"></i> Adobe XD</span>
+                        <span class="skill-badge"><i class="fab fa-sketch me-1"></i> Sketch</span>
+                    </div>
+
+                    <h3 class="h4 text-primary mt-5 mb-3">Soft Skills</h3>
+                    <div>
+                        <span class="skill-badge">Problem-Solving</span>
+                        <span class="skill-badge">Team Collaboration</span>
+                        <span class="skill-badge">Project Management</span>
+                        <span class="skill-badge">Adaptability</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-white">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="row g-4">
+
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <!-- Placeholder Image (Replace with a project screenshot) -->
+                        <img src="images/alcabs.png" class="project-img card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Alcabs Eatery</h5>
+                            <p class="card-text text-muted">
+                               Members: John Carl Cabahug <br> Adonis Billy Regodon <br> James Sarillo <br> Jerniel Jao
+                            </p>
+                            <span class="badge bg-primary me-2">HTML</span>
+                            <span class="badge bg-primary me-2">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <!-- Placeholder Image (Replace with a project screenshot) -->
+                        <img src="images/infographics.png" class="project-img card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Infographics</h5>
+                            <p class="card-text text-muted">
+                                Members: John Carl Cabahug <br> Dexter Encarnacion <br> Adonis Billy Regodon <br> Ed Jassen Partusa <br> James Sarillo <br> Jeremy Ando <br> Jerniel Jao <br> Namoc Jusper <br> Rexon Villagracia <br> Yasu Hiro
+                            </p>
+                            <span class="badge bg-primary me-2">Figma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <!-- Placeholder Image (Replace with a project screenshot) -->
+                        <img src="images/siap.png" class="project-img card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary">Infographic</h5>
+                            <p class="card-text text-muted">
+                                Members: Jan Khevin Ligan <br> Adonis Billy Regodon <br> Ian Bentulan <br> Ivyjane Sumayang <br> James Sarillo <br> John Kenny Cabansay <br> John Paul <br> Roche Salvaloza <br> Sarwen Maranga
+                            </p>
+                            <span class="badge bg-primary me-2">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <p class="text-center mb-4">
+                        I'm currently open to new opportunities and collaboration. Send me a message, and let's discuss
+                        your project!
+                    </p>
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control rounded-pill" id="name" placeholder="Your Name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control rounded-pill" id="email"
+                                placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control rounded-4" id="message" rows="4"
+                                placeholder="Your message here..." required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow">Send
+                                Message</button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i> meeliza.mingasca@email.com</p>
+                        <p><i class="fas fa-phone-alt text-primary me-2"></i> +63 9XX XXX XXXX</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-3">&copy; 2025 Meeliza Jean Mingasca. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
