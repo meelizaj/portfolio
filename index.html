@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meeliza Jean Mingasca</title>
+
+    <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -25,147 +27,7 @@
 
         /* --- Bootstrap Class Overrides for New Theme --- */
         /* Overriding Bootstrap classes to use the new custom color variables */
-        .text-primary {
-            color: var(--primary-color) !important;
-        }
-
-        .bg-primary {
-            background-color: var(--primary-color) !important;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color) !important;
-            border-color: var(--primary-color) !important;
-        }
-
-        .btn-outline-primary {
-            color: var(--primary-color) !important;
-            border-color: var(--primary-color) !important;
-        }
-
-        .btn-outline-primary:hover {
-            background-color: var(--primary-color) !important;
-            color: white !important;
-        }
-
-        /* --- End Overrides --- */
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f4f7f6;
-        }
-
-        /* Hero Section Styling */
-        #hero {
-            /* Changed background to the requested light theme color #F7D9BC */
-            background: linear-gradient(135deg, var(--theme-light), #E0C7A9);
-            color: #343a40;
-            /* Changed text to dark for contrast against light background */
-            padding: 100px 0;
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .profile-pic-container {
-            width: 250px;
-            height: 250px;
-            overflow: hidden;
-            border-radius: 50%;
-            border: 5px solid rgba(0, 0, 0, 0.1);
-            /* Darker border for visibility */
-            margin: 0 auto 20px;
-        }
-
-        .profile-pic {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #343a40;
-            margin-bottom: 40px;
-            text-align: center;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: var(--primary-color);
-            /* Uses the new accent color */
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
-
-        /* Card and Project Styling */
-        .card {
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-img {
-            height: 200px;
-            object-fit: cover;
-            width: 100%;
-        }
-
-        /* Skills Section Styling */
-        .skill-badge {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 5px;
-            border-radius: 25px;
-            font-weight: 600;
-            background-color: var(--highlight-color);
-            color: #495057;
-            border: 1px solid #dee2e6;
-            transition: background-color 0.3s;
-        }
-
-        .skill-badge:hover {
-            background-color: var(--primary-color);
-            /* Uses the new accent color */
-            color: white;
-            border-color: var(--primary-color);
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 30px 0;
-        }
-
-        .social-icon {
-            font-size: 1.5rem;
-            margin: 0 10px;
-            color: white;
-            transition: color 0.3s;
-        }
-
-        .social-icon:hover {
-            color: var(--primary-color);
-            /* Uses the new accent color */
-        }
+        
     </style>
 </head>
 
@@ -175,7 +37,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
             <!-- Updated text-primary to use the new accent color -->
-            <a class="navbar-brand fw-bold text-primary" href="#">M.J.M.</a>
+            <img class="navbar-brand fw-bold" src="images/logo.png">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -250,7 +112,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
                     <!-- Updated text-primary color -->
-                    <h3 class="h4 text-primary mb-3">Programming & Frameworks</h3>
+                    <h3 class="h4 skill-title mb-3">Programming & Frameworks</h3>
                     <div>
                         <span class="skill-badge"><i class="fab fa-html5 me-1"></i> HTML5</span>
                         <span class="skill-badge"><i class="fab fa-css3-alt me-1"></i> CSS3</span>
@@ -258,7 +120,7 @@
                     </div>
 
                     <!-- Updated text-primary color -->
-                    <h3 class="h4 text-primary mt-5 mb-3">UI/UX Design & Prototyping</h3>
+                    <h3 class="h4 skill-title mt-5 mb-3">UI/UX Design & Prototyping</h3>
                     <div>
                         <span class="skill-badge"><i class="fab fa-figma me-1"></i> Figma</span>
                         <span class="skill-badge"><i class="fab fa-adobe me-1"></i> Adobe XD</span>
@@ -266,7 +128,7 @@
                     </div>
 
                     <!-- Updated text-primary color -->
-                    <h3 class="h4 text-primary mt-5 mb-3">Soft Skills</h3>
+                    <h3 class="h4 skill-title mt-5 mb-3">Soft Skills</h3>
                     <div>
                         <span class="skill-badge">Problem-Solving</span>
                         <span class="skill-badge">Team Collaboration</span>
@@ -283,23 +145,24 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="row g-4">
+                
 
                 <!-- Project 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <!-- Placeholder Image (Replace with a project screenshot) -->
                         <a
-                            href="https://bocchi-69.github.io/Alcabs-Landing-Page/index.html?fbclid=IwY2xjawOfmHhleHRuA2FlbQIxMQABHudpMq0Wapq6wr6tA4e6IMJsQvO_MfRRE-2552bXJacNT35LNVkm3ltshlsM_aem_z1HMKei0pyv-faLBluoHUg"><img
-                                src="images/alcabs.png" class="project-img card-img-top"
-                                alt="Alcabs Eatery Project"></a>
+                            href="https://mini-web-zeta.vercel.app/"><img
+                                src="images/beach.jpg" class="project-img card-img-top"
+                                alt="Mini-Website Project"></a>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold text-primary">Alcabs Eatery</h5>
+                            <h5 class="card-title fw-bold">Mini-Website</h5>
                             <p class="card-text text-muted">
-                                Members: John Carl Cabahug <br> Adonis Billy Regodon <br> James Sarillo <br> Jerniel Jao
+                                This mini web features two individuals, showcasing their hobbies and their experiences as IT students, highlighting how they balance their interests with their academic journey in technology.
                             </p>
                             <!-- Updated badge color to use the new accent color -->
-                            <span class="badge bg-primary me-2">HTML</span>
-                            <span class="badge bg-primary me-2">Bootstrap 5</span>
+                            <span class="badge me-2">HTML</span>
+                            <span class="badge me-2">Bootstrap 5</span>
                         </div>
                     </div>
                 </div>
@@ -308,21 +171,19 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
                         <!-- Placeholder Image (Replace with a project screenshot) -->
-                        <a href="https://bocchi-69.github.io/SOCIAL-ISSUES-INFOGRAPHICS/"><img
-                                src="images/infographics.png" class="project-img card-img-top"
-                                alt="Infographics Project"></a>
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold text-primary">Infographics</h5>
-                                <p class="card-text text-muted">
-                                    Members: John Carl Cabahug <br> Dexter Encarnacion <br> Adonis Billy Regodon <br> Ed
-                                    Jassen Partusa <br> James Sarillo <br> Jeremy Ando <br> Jerniel Jao <br> Namoc
-                                    Jusper
-                                    <br> Rexon Villagracia <br> Yasu Hiro
-                                </p>
-                                <!-- Updated badge color to use the new accent color -->
-                                <span class="badge bg-primary me-2">Website</span>
-                            </div>
-                       
+                        <a
+                            href="https://webposter-two.vercel.app/"><img
+                                src="images/Poster.png" class="project-img card-img-top"
+                                alt="Poster Quote Project"></a>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Poster Quote</h5>
+                            <p class="card-text text-muted">
+                                A poster quote that says “Create a life you can’t wait to wake up to” inspires people to build a meaningful and fulfilling life, encouraging passion, purpose, and motivation in everyday living.
+                            </p>
+                            <!-- Updated badge color to use the new accent color -->
+                            <span class="badge me-2">HTML</span>
+                            <span class="badge me-2">Bootstrap 5</span>
+                        </div>
                     </div>
                 </div>
 
@@ -331,18 +192,75 @@
                     <div class="card h-100">
                         <!-- Placeholder Image (Replace with a project screenshot) -->
                         <a
+                            href="https://sched-tau.vercel.app/"><img
+                                src="images/table.png" class="project-img card-img-top"
+                                alt="Class Schedule Project"></a>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Class Schedule</h5>
+                            <p class="card-text text-muted">
+                                My class schedule and daily routine outline how I manage my time each day, balancing school activities, personal tasks, and rest to stay organized and productive.
+
+                            </p>
+                            <!-- Updated badge color to use the new accent color -->
+                            <span class="badge me-2">HTML</span>
+                            <span class="badge me-2">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <!-- Placeholder Image (Replace with a project screenshot) -->
+                        <a
+                            href="https://bocchi-69.github.io/Alcabs-Landing-Page/index.html?fbclid=IwY2xjawOfmHhleHRuA2FlbQIxMQABHudpMq0Wapq6wr6tA4e6IMJsQvO_MfRRE-2552bXJacNT35LNVkm3ltshlsM_aem_z1HMKei0pyv-faLBluoHUg"><img
+                                src="images/alcabs.png" class="project-img card-img-top"
+                                alt="Alcabs Eatery Project"></a>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Alcabs Eatery</h5>
+                            <p class="card-text text-muted">
+                                The Alcabs Eatery Project showcases a concept or business plan for a food establishment, highlighting its menu offerings, branding, target customers, and overall vision to deliver a satisfying dining experience.
+                            </p>
+                            <!-- Updated badge color to use the new accent color -->
+                            <span class="badge me-2">HTML</span>
+                            <span class="badge me-2">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <!-- Placeholder Image (Replace with a project screenshot) -->
+                        <a href="https://bocchi-69.github.io/SOCIAL-ISSUES-INFOGRAPHICS/"><img
+                                src="images/infographics.png" class="project-img card-img-top"
+                                alt="Infographics Project"></a>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Infographics</h5>
+                                <p class="card-text text-muted">
+                                    An infographic project on digital accessibility presents key information on how technology can be designed to be inclusive for everyone, including people with disabilities, highlighting its importance, principles, and practical ways to make digital content easier to access and use.
+                                </p>
+                                <!-- Updated badge color to use the new accent color -->
+                                <span class="badge me-2">Website</span>
+                            </div>
+                       
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <!-- Placeholder Image (Replace with a project screenshot) -->
+                        <a
                             href="https://www.figma.com/proto/9qHX1dZfmgWfCe365niF7j/Infographic?node-id=47-2&p=f&t=jGemjfhtWGuwc0jX-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"><img
                                 src="images/siap.png" class="project-img card-img-top" alt="SIAP Infographic Project"></a>
                             <div class="card-body">
-                                <h5 class="card-title fw-bold text-primary">Infographic</h5>
+                                <h5 class="card-title fw-bold">Infographic</h5>
                                 <p class="card-text text-muted">
-                                    Members: Jan Khevin Ligan <br> Adonis Billy Regodon <br> Ian Bentulan <br> Ivyjane
-                                    Sumayang <br> James Sarillo <br> John Kenny Cabansay <br> John Paul <br> Roche
-                                    Salvaloza
-                                    <br> Sarwen Maranga
+                                    An infographic about intuitive interfaces, “Software That Reads Your Mind 2032,” explores future technologies that can anticipate user needs through AI, brain-computer interaction, and behavior tracking, aiming to create faster, more personalized, and seamless digital experiences.
                                 </p>
                                 <!-- Updated badge color to use the new accent color -->
-                                <span class="badge bg-primary me-2">Figma</span>
+                                <span class="badge me-2">Figma</span>
                             </div>
                     </div>
                 </div>
@@ -353,14 +271,18 @@
     <!-- Contact Section -->
     <section id="contact" class="bg-light">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <p class="text-center mb-4">
-                        I'm currently open to new opportunities and collaboration. Send me a message, and let's discuss
-                        your project!
-                    </p>
-
+            <div class="contact_1">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <p class="text-center mb-4">
+                            I'm currently open to new opportunities and collaboration. Send me a message, and let's discuss
+                            your project!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="form">
                     <form>
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
@@ -386,19 +308,20 @@
 
                     <div class="text-center mt-4">
                         <!-- Updated icon color to use the new accent color -->
-                        <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i> meeliza.mingasca@email.com</p>
-                        <p><i class="fas fa-phone-alt text-primary me-2"></i> +63 956 321 4452</p>
+                        <p class="mb-1"><i class="fas fa-envelope icon me-2"></i> meeliza.mingasca@gmail.com</p>
+                        <p><i class="fas fa-phone-alt icon me-2"></i> +63 956 321 4452</p>
                     </div>
-
+                </div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Footer -->
     <footer class="text-center">
         <div class="container">
-            <p class="mb-3">&copy; 2025 Meeliza Jean Mingasca. All rights reserved.</p>
+            <p class="mb-3">&copy; 2026 Meeliza Jean Mingasca. All rights reserved.</p>
             <div class="social-links">
                 <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
