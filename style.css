@@ -1,35 +1,30 @@
-        .text-primary 
-        {
+        .text-primary {
             color: #a8753a !important;
         }
 
-        .bg-primary 
-        {
+        .bg-primary {
             background-color: #a8753a !important;
         }
 
-        .btn-primary 
-        {
+        .btn-primary {
             background-color: #a8753a !important;
             border: none;
         }
 
-        .btn-primary:hover 
-        {
+        .btn-primary:hover {
             background-color: #a8753a;
         }
 
-        .btn-outline-primary 
-        {
+        .btn-outline-primary {
             color: var(--primary-color) !important;
             border-color: var(--primary-color) !important;
         }
 
-        .btn-outline-primary:hover 
-        {
+        .btn-outline-primary:hover {
             color: white !important;
             background-color: #cdb295 !important;
         }
+
         /* --- End Overrides --- */
 
         body {
@@ -111,8 +106,7 @@
         }
 
         /* Skills Section Styling */
-        .skill-badge
-       {
+        .skill-badge {
             display: inline-block;
             padding: 8px 15px;
             margin: 5px;
@@ -124,8 +118,7 @@
             transition: background-color 0.3s;
         }
 
-        .skill-badge:hover
-        {
+        .skill-badge:hover {
             background-color: #a8753a !important;
             /* Uses the new accent color */
             color: white;
@@ -151,45 +144,39 @@
             /* Uses the new accent color */
         }
 
-        .card-text
-        {
-          font-size: small;
+        .card-text {
+            font-size: small;
         }
 
-        .badge
-        {
-          padding-bottom: 10px;
-          margin-top: 5px;
-          background-color: #a8753a !important;
+        .badge {
+            padding-bottom: 10px;
+            margin-top: 5px;
+            background-color: #a8753a !important;
         }
 
-        .skill-title
-        {
-          color: #a8753a !important;
+        .skill-title {
+            color: #a8753a !important;
         }
 
-        .card-title
-        {
-          color: #a8753a !important;
+        .card-title {
+            color: #a8753a !important;
         }
 
-        #contact .container
-        {
+        #contact .container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             gap: 50px;
         }
-        .contact_1
-        {
+
+        .contact_1 {
             display: flex;
             flex-direction: column;
             justify-content: center;
             margin-left: -100px;
         }
 
-        .form
-        {
+        .form {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -200,49 +187,60 @@
             border-radius: 50px;
         }
 
-        .icon
-       {
-        color: #a8753a !important;
-       }
+        .icon {
+            color: #a8753a !important;
+        }
 
-       .navbar-brand
-       {
-        height: 50px;
-        width: 150px;
-       }
-    @media (min-width: 300px) and (max-width: 700px) {
+        .navbar-brand {
+            height: 50px;
+            width: 150px;
+        }
 
-    #contact .container {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 20px !important;
-    }
+        @media (min-width: 300px) and (max-width: 700px) {
 
-    .contact_1 {
-        margin-left: 0 !important;
-        text-align: center;
-    }
+            #contact .container {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 20px !important;
+            }
 
-    .form {
-        width: 100% !important;
-        padding: 20px !important;
-        border-radius: 20px !important;
-    }
+            .contact_1 {
+                margin-left: 0 !important;
+                text-align: center;
+            }
 
-    #contact {
-        padding: 30px 15px;
-    }
+            .form {
+                width: 100% !important;
+                padding: 20px !important;
+                border-radius: 20px !important;
+            }
 
-    .contact_1 h2.section-title {
-        font-size: 1.6rem;
-    }
+            #contact {
+                padding: 30px 15px;
+            }
 
-    .contact_1 p {
-        font-size: 0.95rem;
-    }
+            .contact_1 h2.section-title {
+                font-size: 1.6rem;
+            }
 
-    .text-center p {
-        font-size: 0.85rem;
-    }
-}
-    
+            .contact_1 p {
+                font-size: 0.95rem;
+            }
+
+            .text-center p {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                z-index: 999;
+                padding: 1rem;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+        }
